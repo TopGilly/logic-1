@@ -1,0 +1,145 @@
+﻿2021-11-24 15:16:45> Program: Starting Squirrel Updater: --install . --checkInstall --source=default --silent --exeName=Teams.exe
+2021-11-24 15:16:45> RegistryService: RegKeyExists: HKEY_CURRENT_USER\Software\Microsoft\Office\Teams does not have PreventInstallationFromMsi
+2021-11-24 15:16:46> Program: Starting install, writing to C:\Users\c00261033\AppData\Local\SquirrelTemp
+2021-11-24 15:16:46> Program: File does not contain contextual info: Teams.exe
+2021-11-24 15:16:46> UpdateManager: using rootAppDirectory: C:\Users\c00261033\AppData\Local\Microsoft\Teams
+2021-11-24 15:16:46> Program: About to install to: C:\Users\c00261033\AppData\Local\Microsoft\Teams
+2021-11-24 15:16:46> Program: Setup.json exist, copying over
+2021-11-24 15:16:46> RegistryService: RegKeyExists: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run has TeamsMachineInstaller. Data - C:\Program Files (x86)\Teams Installer\Teams.exe --checkInstall --source=default
+2021-11-24 15:16:46> RegistryService: TrySetRegKey: HKEY_CURRENT_USER\Software\Microsoft\Office\Teams\InstallSource set successfully as MSI
+2021-11-24 15:16:46> CheckForUpdateImpl: Couldn't write out staging user ID, this user probably shouldn't get beta anything: System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\c00261033\AppData\Local\Microsoft\Teams\packages\.betaId'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   at System.IO.File.WriteAllText(String path, String contents, Encoding encoding)
+   at Squirrel.UpdateManager.CheckForUpdateImpl.getOrCreateStagedUserId()
+2021-11-24 15:16:46> CheckForUpdateImpl: Failed to load local releases, starting from scratch: System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\c00261033\AppData\Local\Microsoft\Teams\packages\RELEASES'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at Squirrel.Utility.LoadLocalReleases(String localReleaseFile)
+   at Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__3.MoveNext()
+2021-11-24 15:16:46> CheckForUpdateImpl: Reading RELEASES file from C:\Users\c00261033\AppData\Local\SquirrelTemp
+2021-11-24 15:16:46> CheckForUpdateImpl: First run or local directory is corrupt, starting from scratch
+2021-11-24 15:16:46> ApplyReleasesImpl: No delta packages found. Applying current release package.
+2021-11-24 15:16:46> ApplyReleasesImpl: getting squirrel aware apps failed with exception Could not find a part of the path 'C:\Users\c00261033\AppData\Local\Microsoft\Teams\current'.
+2021-11-24 15:16:46> ApplyReleasesImpl: Writing files to app directory: C:\Users\c00261033\AppData\Local\Microsoft\Teams\current
+2021-11-24 15:16:51> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\c00261033\AppData\Local\Microsoft\Teams\current\Teams.exe]
+2021-11-24 15:16:55> ApplyReleasesImpl: About to RemoveOldShorcuts for Teams.exe, rootAppDir C:\Users\c00261033\AppData\Local\Microsoft\Teams
+2021-11-24 15:16:55> ApplyReleasesImpl: Starting fixPinnedExecutables
+2021-11-24 15:16:55> ApplyReleasesImpl: fixPinnedExecutables: PinnedExecutables directory doesn't exitsts, skiping...
+2021-11-24 15:16:55> ApplyReleasesImpl: Fixing up tray icons
+2021-11-24 15:16:55> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__24_0(RegistryView view)
+2021-11-24 15:16:55> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__24_0(RegistryView view)
+2021-11-24 15:16:55> MeetingAddinInstaller: System.ArgumentException: Cannot delete a subkey tree because the subkey does not exist.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at Microsoft.Win32.RegistryKey.DeleteSubKeyTree(String subkey, Boolean throwOnMissingSubKey)
+   at Microsoft.Win32.RegistryKey.DeleteSubKeyTree(String subkey)
+   at Squirrel.MeetingAddinInstaller.<InstallMeetingAddinAsync>d__15.MoveNext()
+2021-11-24 15:16:55> MeetingAddinInstaller: StagedAppDirectory does not exist. Using Current
+2021-11-24 15:16:55> MeetingAddinInstaller: There is no version.txt. Falling back to getting version from folder name
+2021-11-24 15:16:55> MeetingAddinInstaller: Version: 1.0.21063.3; addinPackageDirectory: 1.0.21063.3
+2021-11-24 15:16:55> MeetingAddinInstaller: .dead exists: False
+2021-11-24 15:16:55> MeetingAddinInstaller: path to .dead: C:\Users\c00261033\AppData\Local\Microsoft\TeamsMeetingAddin\1.0.21063.3\.dead
+2021-11-24 15:16:55> MeetingAddinInstaller: before cleanup unused versions
+2021-11-24 15:16:55> MeetingAddinInstaller: Addin directory exists. Copy was successful
+2021-11-24 15:16:56> MeetingAddinInstaller: Version 1.0.21063.3 of the meeting add-in is now installed
+2021-11-24 15:16:56> PresenceAddinInstaller: Installing Teams Presence addin for Outlook...
+2021-11-24 15:16:56> PresenceAddinInstaller: Copying C:\Users\c00261033\AppData\Local\Microsoft\Teams\current\resources\assets\tlb\Uc.tlb to C:\Users\c00261033\AppData\Local\Microsoft\TeamsPresenceAddin
+2021-11-24 15:16:56> PresenceAddinInstaller: Copying C:\Users\c00261033\AppData\Local\Microsoft\Teams\current\resources\assets\tlb\Uc.win32.tlb to C:\Users\c00261033\AppData\Local\Microsoft\TeamsPresenceAddin
+2021-11-24 15:16:56> PresenceAddinInstaller: check if UC TypeLib points to current\resources\assets\tlb\Uc.tlb
+2021-11-24 15:16:56> PresenceAddinInstaller: UC Typelib WIN32 is registered under HKCU and file exists. Registration not needed!
+2021-11-24 15:16:56> PresenceAddinInstaller: UC Typelib WIN64 is registered under HKCU and file exists. Registration not needed!
+2021-11-24 15:16:56> ApplyReleasesImpl: cleanDeadVersions: for original version of  and current version of 1.4.00.16575
+2021-11-24 15:16:56> ApplyReleasesImpl: cleanDeadVersions: exclude current folder stage
+2021-11-24 15:16:56> RegistryService: TryDeleteRegKey: HKEY_CURRENT_USER\Software\Microsoft\Office\Teams\PreventInstallationFromMsi not found
+568> 2021-11-24 15:20:15> Program: Starting Squirrel Updater: --install .
+568> 2021-11-24 15:20:15> Program: Starting install, writing to C:\Users\c00261033\AppData\Local\SquirrelTemp
+568> 2021-11-24 15:20:15> Program: About to install to: C:\Users\c00261033\AppData\Local\Discord
+568> 2021-11-24 15:20:15> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+568> 2021-11-24 15:20:15> CheckForUpdateImpl: Reading RELEASES file from C:\Users\c00261033\AppData\Local\SquirrelTemp
+568> 2021-11-24 15:20:15> CheckForUpdateImpl: Remote version 1.0.9003 differs from local 
+568> 2021-11-24 15:20:15> CheckForUpdateImpl: First run or local directory is corrupt, starting from scratch
+568> 2021-11-24 15:20:15> ApplyReleasesImpl: Writing files to app directory: C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\app.ico to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\app.ico
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\chrome_100_percent.pak to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\chrome_100_percent.pak
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\chrome_200_percent.pak to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\chrome_200_percent.pak
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\d3dcompiler_47.dll to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\d3dcompiler_47.dll
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\Discord.exe to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\Discord.exe
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\ffmpeg.dll to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\ffmpeg.dll
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\icudtl.dat to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\icudtl.dat
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\installer.db to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\installer.db
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\libEGL.dll to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\libEGL.dll
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\libGLESv2.dll to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\libGLESv2.dll
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\snapshot_blob.bin to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\snapshot_blob.bin
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\updater.node to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\updater.node
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\resources.pak to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\resources.pak
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\v8_context_snapshot.bin to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\v8_context_snapshot.bin
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\vk_swiftshader.dll to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\vk_swiftshader.dll
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\vulkan-1.dll to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\vulkan-1.dll
+568> 2021-11-24 15:20:18> ApplyReleasesImpl: Moving file C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\lib\net45\vk_swiftshader_icd.json to C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\vk_swiftshader_icd.json
+568> 2021-11-24 15:20:20> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\Discord.exe]
+568> 2021-11-24 15:20:20> Utility: Process Started: C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\Discord.exe --squirrel-install 1.0.9003, pid 11764
+568> 2021-11-24 15:20:24> Utility: Received exitcode 0 from process C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\Discord.exe
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: ran C:\Users\c00261033\AppData\Local\Discord\app-1.0.9003\Discord.exe, pid 4956
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: Starting fixPinnedExecutables
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: fixPinnedExecutables: newCurrentFolder: app-1.0.9003
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: Skipping C:\Users\c00261033\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar, since it does not exist!
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: File 'C:\Users\c00261033\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\Narrator.lnk' could not be converted into a valid ShellLink: System.IO.FileNotFoundException: The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+   at Squirrel.Shell.ShellLink.IShellLinkW.Resolve(IntPtr hWnd, UInt32 fFlags)
+   at Squirrel.Shell.ShellLink.Open(String linkFile, IntPtr hWnd, EShellLinkResolveFlags resolveFlags, UInt16 timeOut)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<fixPinnedExecutables>b__11_0(FileInfo file)
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: File 'C:\Users\c00261033\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\On-Screen Keyboard.lnk' could not be converted into a valid ShellLink: System.IO.FileNotFoundException: The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+   at Squirrel.Shell.ShellLink.IShellLinkW.Resolve(IntPtr hWnd, UInt32 fFlags)
+   at Squirrel.Shell.ShellLink.Open(String linkFile, IntPtr hWnd, EShellLinkResolveFlags resolveFlags, UInt16 timeOut)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<fixPinnedExecutables>b__11_0(FileInfo file)
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: Updating shortcut C:\Users\c00261033\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord.lnk
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: Updating shortcut C:\Users\c00261033\Desktop\Discord.lnk
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: Fixing up tray icons
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: cleanDeadVersions: for version 1.0.9003
+568> 2021-11-24 15:20:24> ApplyReleasesImpl: cleanDeadVersions: exclude current version folder app-1.0.9003
+11256> 2021-11-24 15:20:27> Program: Starting Squirrel Updater: --install .
+11256> 2021-11-24 15:20:27> Program: Starting install, writing to C:\Users\c00261033\AppData\Local\SquirrelTemp
+11256> 2021-11-24 15:20:27> Program: About to install to: C:\Users\c00261033\AppData\Local\Discord
+11256> 2021-11-24 15:20:27> Program: Install path C:\Users\c00261033\AppData\Local\Discord already exists, burning it to the ground
+11256> 2021-11-24 15:20:27> IEnableLogger: Failed to remove existing directory on full install, is the app still running???: System.IO.IOException: Access to the path 'C:\Users\c00261033\AppData\Local\Discord' is denied.
+   at System.IO.Directory.InternalMove(String sourceDirName, String destDirName, Boolean checkHost)
+   at Squirrel.Utility.<DeleteDirectory>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<LogIfThrows>d__37.MoveNext()
+11256> 2021-11-24 15:20:27> Unhandled exception: System.AggregateException: One or more errors occurred. ---> System.IO.IOException: Access to the path 'C:\Users\c00261033\AppData\Local\Discord' is denied.
+   at System.IO.Directory.InternalMove(String sourceDirName, String destDirName, Boolean checkHost)
+   at Squirrel.Utility.<DeleteDirectory>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<LogIfThrows>d__37.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Update.Program.<Install>d__5.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Squirrel.Update.Program.executeCommandLine(String[] args)
+   at Squirrel.Update.Program.main(String[] args)
+---> (Inner Exception #0) System.IO.IOException: Access to the path 'C:\Users\c00261033\AppData\Local\Discord' is denied.
+   at System.IO.Directory.InternalMove(String sourceDirName, String destDirName, Boolean checkHost)
+   at Squirrel.Utility.<DeleteDirectory>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<LogIfThrows>d__37.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Update.Program.<Install>d__5.MoveNext()<---
+
